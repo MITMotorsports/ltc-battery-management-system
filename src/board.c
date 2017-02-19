@@ -2,7 +2,7 @@
 #include "board.h"
 #include "brusa.h"
 
-const uint32_t OscRateIn = 0;
+const uint32_t OscRateIn = 24000000;
 
 #define UART_BUFFER_SIZE 100
 

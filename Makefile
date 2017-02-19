@@ -50,7 +50,7 @@ OUT_DIR = bin
 C_DEFS = -DCORE_M0 -DDEBUG_ENABLE
 
 # ASM definitions
-AS_DEFS = -D__STARTUP_CLEAR_BSS -D__START=main
+AS_DEFS = -D__STARTUP_CLEAR_BSS -D__START=main -D__XTAL=24000000
 
 # include directories (absolute or relative paths to additional folders with
 # headers, current folder is always included)
