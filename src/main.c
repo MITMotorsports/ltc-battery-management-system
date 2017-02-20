@@ -105,7 +105,6 @@ void Init_BMS_Structs(void) {
 	pack_status.pack_cell_min_mV = 0xFFFFFFFF; // [TODO] this is a bodge fix
 	pack_status.pack_current_mA = 0;
 	pack_status.pack_voltage_mV = 0;
-	pack_status.precharge_voltage = 0;
 	pack_status.max_cell_temp_C = 0;
 
 }

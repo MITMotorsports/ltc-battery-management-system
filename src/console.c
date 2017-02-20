@@ -160,10 +160,6 @@ static void get(const char * const * argv) {
 					utoa(bms_input->pack_status->pack_voltage_mV, tempstr,10);
 					Board_Println(tempstr);
 					break;
-				case ROL_precharge_voltage:
-					utoa(bms_input->pack_status->precharge_voltage, tempstr,10);
-					Board_Println(tempstr);
-					break;
 				case ROL_max_cell_temp_C:
 					utoa(bms_input->pack_status->max_cell_temp_C, tempstr,10);
 					Board_Println(tempstr);

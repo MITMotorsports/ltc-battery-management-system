@@ -38,7 +38,6 @@ typedef enum {
     ROL_pack_cell_min_mV,
     ROL_pack_current_mA,
     ROL_pack_voltage_mV,
-    ROL_precharge_voltage,
     ROL_max_cell_temp_C,
     ROL_error,
     ROL_LENGTH
