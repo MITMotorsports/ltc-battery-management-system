@@ -18,7 +18,6 @@ BMS_PACK_STATUS_T pack_status;
 BMS_INPUT_T bms_input;
 
 //memory allocation for BMS_STATE_T
-BMS_CHARGER_STATUS_T charger_status;
 uint32_t cell_voltages[MAX_NUM_MODULES*MAX_CELLS_PER_MODULE];
 uint8_t num_cells_in_modules[MAX_NUM_MODULES];
 PACK_CONFIG_T pack_config;
@@ -40,7 +39,6 @@ TEST_SETUP(Discharge_Test) {
     bms_output.read_eeprom_packconfig = false;
     bms_output.check_packconfig_with_ltc = false;
 
-    bms_state.charger_status = &charger_status;
     pack_status.cell_voltages_mV = cell_voltages;
     pack_config.module_cell_count = num_cells_in_modules;
     bms_state.pack_config = &pack_config;

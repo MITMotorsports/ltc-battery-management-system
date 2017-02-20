@@ -31,11 +31,6 @@ typedef struct BMS_PACK_STATUS {
 	uint32_t max_cell_temp_C;
 } BMS_PACK_STATUS_T;
 
-typedef struct BMS_CHARGER_STATUS {
-    bool connected; // example charger status
-	bool error;
-} BMS_CHARGER_STATUS_T;
-
 typedef enum BMS_SSM_MODE {
 	BMS_SSM_MODE_INIT,
 	BMS_SSM_MODE_STANDBY,
@@ -123,7 +118,6 @@ static const char * const BMS_ERROR_NAMES[] = {
 };
 
 typedef struct BMS_STATE {
-    BMS_CHARGER_STATUS_T *charger_status;
     PACK_CONFIG_T *pack_config;
 	BMS_SSM_MODE_T curr_mode;
 

@@ -18,7 +18,6 @@
 BMS_INPUT_T input;
 BMS_OUTPUT_T output;
 BMS_STATE_T state;
-BMS_CHARGER_STATUS_T _charger_status;
 BMS_PACK_STATUS_T _pack_status;
 PACK_CONFIG_T config;
 uint8_t mod_cell_count[NUM_MODULES] = {2, 2};
@@ -33,7 +32,6 @@ TEST_GROUP(Charge_Test);
 
 TEST_SETUP(Charge_Test) {
 	printf("\r(Charge_Test)Setup");
-	state.charger_status = &_charger_status;
 	state.pack_config = &config;
   	
   	config.cell_min_mV = CELL_MIN;

@@ -24,7 +24,6 @@ static BMS_PACK_STATUS_T pack_status;
 static BMS_INPUT_T bms_input;
 
 // memory allocation for BMS_STATE_T
-static BMS_CHARGER_STATUS_T charger_status;
 static uint32_t cell_voltages[MAX_NUM_MODULES*MAX_CELLS_PER_MODULE];
 static uint8_t module_cell_count[MAX_NUM_MODULES];
 static PACK_CONFIG_T pack_config;
@@ -61,15 +60,11 @@ void Init_BMS_Structs(void) {
 	charge_req.charge_current_mA = 0;
 	charge_req.charge_voltage_mV = 0;
 
-	bms_state.charger_status = &charger_status;
 	bms_state.pack_config = &pack_config;
 	bms_state.curr_mode = BMS_SSM_MODE_INIT;
 	bms_state.init_state = BMS_INIT_OFF;
 	bms_state.charge_state = BMS_CHARGE_OFF;
 	bms_state.discharge_state = BMS_DISCHARGE_OFF;
-
-	charger_status.connected = false;
-	charger_status.error = false;
 
 	pack_config.module_cell_count = module_cell_count;
 	pack_config.cell_min_mV = 0;
