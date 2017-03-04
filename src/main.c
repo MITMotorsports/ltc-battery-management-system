@@ -232,9 +232,11 @@ int main(void) {
 	LPC_SYSCTL->CLKOUTUEN = 0x00; 		// Toggle Update CLKOUT Source
 	LPC_SYSCTL->CLKOUTUEN = 0x01;
 	while(!(LPC_SYSCTL->CLKOUTUEN & 0x1)); // Wait until updated
-	LPC_SYSCTL->CLKOUTDIV = 0x04; 		// No division
+	LPC_SYSCTL->CLKOUTDIV = 0x02; 		// No division
 
 	Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO0_1, (IOCON_FUNC1 | IOCON_MODE_INACT | IOCON_OPENDRAIN_EN)); /*CLKOUT*/
+
+
 
 	while(1) {
 

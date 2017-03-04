@@ -112,20 +112,18 @@
 //   <o15.16>  IOCON Clock Enable
 // </e>
 */
-#define CLOCK_SETUP		   1
-#define SYSCLK_SETUP		  1
-#define SYSOSC_SETUP		  1
-#define SYSOSCCTRL_Val		0x0
-#define WDTOSC_SETUP		  0
-#define WDTOSCCTRL_Val		0xA0
-#define SYSPLLCLKSEL_Val	  0x1
-// #define SYSPLLCLKSEL_Val	  0x0
-#define SYSPLL_SETUP		  1
-#define SYSPLLCTRL_Val		0x21
-// #define SYSPLLCTRL_Val		0x23
-#define MAINCLKSEL_Val		0x3
-#define SYSAHBCLKDIV_Val	  0x1
-#define AHBCLKCTRL_Val		0x1005F
+#define CLOCK_SETUP		   	  	1
+#define SYSCLK_SETUP		  	1
+#define SYSOSC_SETUP		  	1
+#define SYSOSCCTRL_Val			0x2
+#define WDTOSC_SETUP		  	0
+#define WDTOSCCTRL_Val			0xA0
+#define SYSPLLCLKSEL_Val	  	0x1
+#define SYSPLL_SETUP		  	1
+#define SYSPLLCTRL_Val			0x21
+#define MAINCLKSEL_Val			0x3
+#define SYSAHBCLKDIV_Val	  	0x1
+#define AHBCLKCTRL_Val			0x1005F
 
 /*--------------------- Memory Mapping Configuration -------------------------
 //
@@ -195,7 +193,7 @@
 /*----------------------------------------------------------------------------
   Define clocks
  *----------------------------------------------------------------------------*/
-#define __XTAL			(12000000UL)	/* Oscillator frequency			 */
+#define __XTAL			(24000000UL)	/* Oscillator frequency			 */
 #define __SYS_OSC_CLK	 (	__XTAL)	/* Main oscillator frequency		*/
 #define __IRC_OSC_CLK	 (12000000UL)	/* Internal RC oscillator frequency */
 
